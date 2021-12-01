@@ -26,6 +26,8 @@ function _getMetricsNavigate (perfEntries, meta) {
     load           : perfEntries[0].loadEventEnd,
     domComplete    : perfEntries[0].domComplete,
     domInteractive : perfEntries[0].domInteractive,
+    dns            : perfEntries[0].domainLookupEnd - perfEntries[0].domainLookupStart,
+    initConn       : perfEntries[0].connectEnd - perfEntries[0].connectStart,
   };
 
   return [{
@@ -37,6 +39,8 @@ function _getMetricsNavigate (perfEntries, meta) {
       load          : metrics.load,
       domComplete   : metrics.domComplete,
       domInteractive: metrics.domInteractive,
+      dns           : metrics.dns,
+      initConn      : metrics.initConn,
     },
     ...meta,
   }];
