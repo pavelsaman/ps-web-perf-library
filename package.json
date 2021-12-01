@@ -1,0 +1,20 @@
+{
+  "name": "ps-web-perf-library",
+  "version": "1.0.0",
+  "main": "ps-web-perf-library.js",
+  "author": "Pavel Saman",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --cache \"**/**/*.js\"",
+    "lint-fix": "./node_modules/.bin/eslint --cache --fix \"**/**/*.js\"",
+    "l": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "~8.3.0",
+    "eslint-plugin-import": "~2.25.3"
+  },
+  "dependencies": {
+    "axios": "~0.24.0",
+    "uuid": "~8.3.2"
+  }
+}
