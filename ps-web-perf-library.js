@@ -19,9 +19,10 @@ const indexes = {
 
 function _getMetrics (perfEntries, meta) {
   const metrics = {
-    fp  : perfEntries.filter(pe => pe.name === 'first-paint'),
-    fcp : perfEntries.filter(pe => pe.name === 'first-contentful-paint'),
-    ttfb: perfEntries[0].responseStart - perfEntries[0].requestStart,
+    fp      : perfEntries.filter(pe => pe.name === 'first-paint'),
+    fcp     : perfEntries.filter(pe => pe.name === 'first-contentful-paint'),
+    ttfb    : perfEntries[0].responseStart - perfEntries[0].requestStart,
+    response: perfEntries[0].responseEnd - perfEntries[0].requestStart,
   };
 
   return [{
