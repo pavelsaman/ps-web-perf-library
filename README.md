@@ -16,6 +16,22 @@ or `yarn`:
 $ yarn add ps-web-perf-library
 ```
 
+## Elastic stack setup
+
+I've created a docker image that you can use in order to:
+
+- set up Elasticsearch indexes
+- set up Kibana indexes
+- set up Kibana dashboards
+
+If everything goes smoothly, you can start collecting data and you will see them in your Kibana instance with no additional setup.
+
+Get your Elastic stack credentials ready and run:
+
+```
+$ 
+```
+
 ## Usage
 
 Typically, you want to use it along with some test framework like WDIO or Puppeteer.
@@ -41,5 +57,3 @@ it('Open homepage', async () => {
 ```
 
 Performance statistics from `performance.getEntries()` API will end up in Elasticsearch, and will be shown on a Kibana dashboard.
-
-
