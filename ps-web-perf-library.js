@@ -48,12 +48,15 @@ function _getMetricsNavigate (perfEntries, meta) {
 }
 
 function _getRequests (perfEntries, meta) {
+  const externalResources = new RegExp(perfEntries[0].name);
+
   const requestResources = {
     requests: perfEntries,
     images  : perfEntries.filter(pe => pe.name.match(regexMatchers.image)),
     css     : perfEntries.filter(pe => pe.name.match(regexMatchers.css)),
     scripts : perfEntries.filter(pe => pe.name.match(regexMatchers.scripts)),
     fonts   : perfEntries.filter(pe => pe.name.match(regexMatchers.fonts)),
+    external: perfEntries.filter(pe => !pe.name.match(externalResources)),
   };
 
   const requestLength = {
@@ -62,6 +65,7 @@ function _getRequests (perfEntries, meta) {
     css     : requestResources.css.length,
     scripts : requestResources.scripts.length,
     fonts   : requestResources.fonts.length,
+    external: requestResources.external.length,
   };
   requestLength.other = requestLength.requests
     - requestLength.images
@@ -75,6 +79,7 @@ function _getRequests (perfEntries, meta) {
     cssTransferSize     : requestResources.css.map(pe => pe.transferSize || 0).reduce((a, b) => a + b, 0),
     scriptsTransferSize : requestResources.scripts.map(pe => pe.transferSize || 0).reduce((a, b) => a + b, 0),
     fontsTransferSize   : requestResources.fonts.map(pe => pe.transferSize || 0).reduce((a, b) => a + b, 0),
+    externalTransferSize: requestResources.external.map(pe => pe.transferSize || 0).reduce((a, b) => a + b, 0),
   };
   requestTransferSize.otherTransferSize = requestTransferSize.requestsTransferSize
     - requestTransferSize.imagesTransferSize
@@ -88,6 +93,7 @@ function _getRequests (perfEntries, meta) {
     cssEncodedSize     : requestResources.css.map(pe => pe.encodedBodySize || 0).reduce((a, b) => a + b, 0),
     scriptsEncodedSize : requestResources.scripts.map(pe => pe.encodedBodySize || 0).reduce((a, b) => a + b, 0),
     fontsEncodedSize   : requestResources.fonts.map(pe => pe.encodedBodySize || 0).reduce((a, b) => a + b, 0),
+    externalEncodedSize: requestResources.external.map(pe => pe.encodedBodySize || 0).reduce((a, b) => a + b, 0),
   };
   requestEncodedSize.otherEncodedSize = requestEncodedSize.requestsEncodedSize
     - requestEncodedSize.imagesEncodedSize
@@ -101,6 +107,7 @@ function _getRequests (perfEntries, meta) {
     cssDecodedSize     : requestResources.css.map(pe => pe.decodedBodySize || 0).reduce((a, b) => a + b, 0),
     scriptsDecodedSize : requestResources.scripts.map(pe => pe.decodedBodySize || 0).reduce((a, b) => a + b, 0),
     fontsDecodedSize   : requestResources.fonts.map(pe => pe.decodedBodySize || 0).reduce((a, b) => a + b, 0),
+    externalDecodedSize: requestResources.external.map(pe => pe.decodedBodySize || 0).reduce((a, b) => a + b, 0),
   };
   requestEncodedSize.otherDecodedSize = requestDecodedSize.requestsDecodedSize
     - requestDecodedSize.imagesDecodedSize

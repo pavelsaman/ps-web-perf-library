@@ -124,44 +124,6 @@
 			"response": []
 		},
 		{
-			"name": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
-					"host": [
-						"{{domain}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"ps-perf-entries",
-						"_mapping"
-					],
-					"query": [
-						{
-							"key": "pretty",
-							"value": null
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "{{domain}}:{{port}}/ps-requests?pretty",
 			"event": [
 				{
@@ -218,51 +180,13 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"properties\": {\n        \"requests\": {\n            \"type\": \"integer\"\n        },\n        \"fonts\": {\n            \"type\": \"integer\"\n        },\n        \"scripts\": {\n            \"type\": \"integer\"\n        },\n        \"images\": {\n            \"type\": \"integer\"\n        },\n        \"css\": {\n            \"type\": \"integer\"\n        },\n        \"other\": {\n            \"type\": \"integer\"\n        },\n        \"requestsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"uuidPerfEntries\": {\n            \"type\": \"keyword\"\n        },\n        \"timestamp\": {\n            \"type\": \"date\",\n            \"format\": \"strict_date_time\"\n        }\n    }\n}",
+					"raw": "{\n    \"properties\": {\n        \"requests\": {\n            \"type\": \"integer\"\n        },\n        \"fonts\": {\n            \"type\": \"integer\"\n        },\n        \"scripts\": {\n            \"type\": \"integer\"\n        },\n        \"images\": {\n            \"type\": \"integer\"\n        },\n        \"css\": {\n            \"type\": \"integer\"\n        },\n        \"other\": {\n            \"type\": \"integer\"\n        },\n        \"external\": {\n            \"type\": \"integer\"\n        },\n        \"requestsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"externalTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"externalEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"externalDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"uuidPerfEntries\": {\n            \"type\": \"keyword\"\n        },\n        \"timestamp\": {\n            \"type\": \"date\",\n            \"format\": \"strict_date_time\"\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
-					"host": [
-						"{{domain}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"ps-requests",
-						"_mapping"
-					],
-					"query": [
-						{
-							"key": "pretty",
-							"value": null
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
 				"url": {
 					"raw": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
 					"host": [
@@ -347,44 +271,6 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
-					"host": [
-						"{{domain}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"ps-metrics-navigate",
-						"_mapping"
-					],
-					"query": [
-						{
-							"key": "pretty",
-							"value": null
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
 				"url": {
 					"raw": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
 					"host": [
