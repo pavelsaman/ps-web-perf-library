@@ -1,0 +1,74 @@
+{
+  "version": "7.14.2",
+  "objects": [
+    {
+      "id": "ad5a6ac0-52cd-11ec-a144-7b6ac21a7dbb",
+      "type": "dashboard",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2021-12-01T17:46:39.916Z",
+      "version": "WzUxMCwxXQ==",
+      "attributes": {
+        "title": "Web Perf Request Statistics",
+        "hits": 0,
+        "description": "Web perf requests statistics is a dashboard related to requests and their types.",
+        "panelsJSON": "[{\"version\":\"7.14.2\",\"type\":\"lens\",\"gridData\":{\"x\":0,\"y\":0,\"w\":36,\"h\":17,\"i\":\"a4c4fd5d-d6ce-4386-824b-aad8c073e723\"},\"panelIndex\":\"a4c4fd5d-d6ce-4386-824b-aad8c073e723\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"type\":\"lens\",\"visualizationType\":\"lnsXY\",\"state\":{\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"6d741693-6aed-404d-bc2b-a6b65f21519d\":{\"columns\":{\"6249dcb8-b001-4ee7-a2c2-b5f5c0bad834\":{\"label\":\"timestamp\",\"dataType\":\"date\",\"operationType\":\"date_histogram\",\"sourceField\":\"timestamp\",\"isBucketed\":true,\"scale\":\"interval\",\"params\":{\"interval\":\"1s\"}},\"25e26e7d-47c2-498b-aec5-d63ec33a5c9a\":{\"label\":\"Num of requests\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"requests\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"ba22c467-1d6e-417f-8f55-5508de2f3bb9\":{\"label\":\"Num of css\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"css\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"10a264aa-9927-43fb-996a-25c589de613e\":{\"label\":\"Num of fonts\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"fonts\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"b4604f43-8ffe-4545-aee2-aefde220b074\":{\"label\":\"Num of images\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"images\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"745ff5d6-b4e5-4296-aef0-a4dc89d131fa\":{\"label\":\"Num of scripts\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"scripts\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"087f3dd7-b938-4f17-b50b-9b4c23b7bc00\":{\"label\":\"Num of other\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"other\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true}},\"columnOrder\":[\"6249dcb8-b001-4ee7-a2c2-b5f5c0bad834\",\"25e26e7d-47c2-498b-aec5-d63ec33a5c9a\",\"b4604f43-8ffe-4545-aee2-aefde220b074\",\"745ff5d6-b4e5-4296-aef0-a4dc89d131fa\",\"10a264aa-9927-43fb-996a-25c589de613e\",\"ba22c467-1d6e-417f-8f55-5508de2f3bb9\",\"087f3dd7-b938-4f17-b50b-9b4c23b7bc00\"],\"incompleteColumns\":{}}}}},\"visualization\":{\"legend\":{\"isVisible\":true,\"position\":\"right\",\"showSingleSeries\":true},\"valueLabels\":\"hide\",\"fittingFunction\":\"None\",\"curveType\":\"LINEAR\",\"yLeftExtent\":{\"mode\":\"full\"},\"yRightExtent\":{\"mode\":\"full\"},\"axisTitlesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"tickLabelsVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"gridlinesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"preferredSeriesType\":\"line\",\"layers\":[{\"layerId\":\"6d741693-6aed-404d-bc2b-a6b65f21519d\",\"accessors\":[\"25e26e7d-47c2-498b-aec5-d63ec33a5c9a\",\"10a264aa-9927-43fb-996a-25c589de613e\",\"b4604f43-8ffe-4545-aee2-aefde220b074\",\"745ff5d6-b4e5-4296-aef0-a4dc89d131fa\",\"087f3dd7-b938-4f17-b50b-9b4c23b7bc00\",\"ba22c467-1d6e-417f-8f55-5508de2f3bb9\"],\"position\":\"top\",\"seriesType\":\"line\",\"showGridlines\":false,\"xAccessor\":\"6249dcb8-b001-4ee7-a2c2-b5f5c0bad834\"}]},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[]},\"references\":[{\"type\":\"index-pattern\",\"id\":\"95d70655-d60d-43fc-9d56-f9f93615fdab\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"95d70655-d60d-43fc-9d56-f9f93615fdab\",\"name\":\"indexpattern-datasource-layer-6d741693-6aed-404d-bc2b-a6b65f21519d\"}]},\"hidePanelTitles\":false,\"enhancements\":{}},\"title\":\"Types of requests\"},{\"version\":\"7.14.2\",\"type\":\"visualization\",\"gridData\":{\"x\":36,\"y\":0,\"w\":12,\"h\":22,\"i\":\"e947d981-cf4c-422d-b50a-7473321c282c\"},\"panelIndex\":\"e947d981-cf4c-422d-b50a-7473321c282c\",\"embeddableConfig\":{\"savedVis\":{\"title\":\"\",\"description\":\"\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"# Web Perf Request Statistics\\n\\nStatistics on this dashboard are related to requests. You can find number of requests by types, or transfer and other sizes.\\n\\n---\\n\\nCreated by Pavel Saman <samanpavel@gmail.com>\"},\"uiState\":{},\"data\":{\"aggs\":[],\"searchSource\":{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}}},\"hidePanelTitles\":false,\"enhancements\":{}},\"title\":\"README\"},{\"version\":\"7.14.2\",\"type\":\"lens\",\"gridData\":{\"x\":0,\"y\":17,\"w\":36,\"h\":17,\"i\":\"fd41f1f6-3b45-4369-a7e7-cd2a63402140\"},\"panelIndex\":\"fd41f1f6-3b45-4369-a7e7-cd2a63402140\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"type\":\"lens\",\"visualizationType\":\"lnsXY\",\"state\":{\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"161d4b17-d929-4d9e-a8ce-faf806ee633d\":{\"columns\":{\"7a1a0c2f-9119-4a44-bc16-8b2955f662e6\":{\"label\":\"timestamp\",\"dataType\":\"date\",\"operationType\":\"date_histogram\",\"sourceField\":\"timestamp\",\"isBucketed\":true,\"scale\":\"interval\",\"params\":{\"interval\":\"1s\"}},\"2887783b-87ac-4311-82ee-d2f7629a9efc\":{\"label\":\"transfer size\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"requestsTransferSize\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"95c7b094-24c5-4c33-a277-c1d7269300c0\":{\"label\":\"encoded size\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"requestsEncodedSize\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true},\"ab6cf4a1-9d97-4f0a-9403-0aa37d880242\":{\"label\":\"decoded size\",\"dataType\":\"number\",\"operationType\":\"last_value\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"requestsDecodedSize\",\"params\":{\"sortField\":\"timestamp\"},\"customLabel\":true}},\"columnOrder\":[\"7a1a0c2f-9119-4a44-bc16-8b2955f662e6\",\"2887783b-87ac-4311-82ee-d2f7629a9efc\",\"95c7b094-24c5-4c33-a277-c1d7269300c0\",\"ab6cf4a1-9d97-4f0a-9403-0aa37d880242\"],\"incompleteColumns\":{}}}}},\"visualization\":{\"legend\":{\"isVisible\":true,\"position\":\"right\"},\"valueLabels\":\"hide\",\"fittingFunction\":\"None\",\"yLeftExtent\":{\"mode\":\"full\"},\"yRightExtent\":{\"mode\":\"full\"},\"axisTitlesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"tickLabelsVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"gridlinesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"preferredSeriesType\":\"bar_stacked\",\"layers\":[{\"layerId\":\"161d4b17-d929-4d9e-a8ce-faf806ee633d\",\"accessors\":[\"2887783b-87ac-4311-82ee-d2f7629a9efc\",\"95c7b094-24c5-4c33-a277-c1d7269300c0\",\"ab6cf4a1-9d97-4f0a-9403-0aa37d880242\"],\"position\":\"top\",\"seriesType\":\"line\",\"showGridlines\":false,\"xAccessor\":\"7a1a0c2f-9119-4a44-bc16-8b2955f662e6\"}]},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[]},\"references\":[{\"type\":\"index-pattern\",\"id\":\"95d70655-d60d-43fc-9d56-f9f93615fdab\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"95d70655-d60d-43fc-9d56-f9f93615fdab\",\"name\":\"indexpattern-datasource-layer-161d4b17-d929-4d9e-a8ce-faf806ee633d\"}]},\"hidePanelTitles\":false,\"enhancements\":{}},\"title\":\"Transfer, encoded, and decoded sizes\"}]",
+        "optionsJSON": "{\"useMargins\":false,\"syncColors\":false,\"hidePanelTitles\":false}",
+        "version": 1,
+        "timeRestore": false,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "type": "index-pattern",
+          "id": "95d70655-d60d-43fc-9d56-f9f93615fdab",
+          "name": "a4c4fd5d-d6ce-4386-824b-aad8c073e723:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "95d70655-d60d-43fc-9d56-f9f93615fdab",
+          "name": "a4c4fd5d-d6ce-4386-824b-aad8c073e723:indexpattern-datasource-layer-6d741693-6aed-404d-bc2b-a6b65f21519d"
+        },
+        {
+          "type": "index-pattern",
+          "id": "95d70655-d60d-43fc-9d56-f9f93615fdab",
+          "name": "fd41f1f6-3b45-4369-a7e7-cd2a63402140:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "95d70655-d60d-43fc-9d56-f9f93615fdab",
+          "name": "fd41f1f6-3b45-4369-a7e7-cd2a63402140:indexpattern-datasource-layer-161d4b17-d929-4d9e-a8ce-faf806ee633d"
+        }
+      ],
+      "migrationVersion": {
+        "dashboard": "7.14.0"
+      },
+      "coreMigrationVersion": "7.14.2"
+    },
+    {
+      "id": "95d70655-d60d-43fc-9d56-f9f93615fdab",
+      "type": "index-pattern",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2021-12-01T17:32:34.582Z",
+      "version": "WzIwMSwxXQ==",
+      "attributes": {
+        "fieldAttrs": "{}",
+        "fields": "[]",
+        "runtimeFieldMap": "{}",
+        "timeFieldName": "timestamp",
+        "title": "ps-requests",
+        "typeMeta": "{}"
+      },
+      "references": [],
+      "migrationVersion": {
+        "index-pattern": "7.11.0"
+      },
+      "coreMigrationVersion": "7.14.2"
+    }
+  ]
+}

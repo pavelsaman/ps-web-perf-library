@@ -1,11 +1,12 @@
+require('dotenv').config();
 const axios = require('axios');
 const uuid = require('uuid');
 
-const elasticUrl = 'http://localhost';
-const elasticPort = '9200';
+const elasticUrl = process.env.ELASTICURL;
+const elasticPort = process.env.ELASTICPORT;
 
 const regexMatchers = {
-  image  : /(.jpg|.jpeg|.png|.svg|.gif|.ico)/,
+  image  : /(.jpg|.jpeg|.png|.svg|.gif|.ico|.webp|.avif)/,
   css    : /(.css|css2)/,
   scripts: /(.js|.php)/,
   fonts  : /(.woff|.woff2)$/,
@@ -157,6 +158,7 @@ function _getPlain (arr, index) {
 }
 
 async function exportWebPerfStats (perfEntries) {
+  if (process.env.NOSTATS === 'true') return false;
   if (!perfEntries.length) return false;
 
   const now = new Date();
