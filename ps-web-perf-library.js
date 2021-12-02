@@ -13,22 +13,22 @@ const regexMatchers = {
 };
 
 const indexes = {
-  psMetricsNavigateIndex    : '{ "index":{ "_index": "ps-metrics-navigate", "_type": "_doc" } }',
-  psRequestsIndex           : '{ "index":{ "_index": "ps-requests", "_type": "_doc" } }',
-  psPerfEntriesIndex        : '{ "index":{ "_index": "ps-perf-entries", "_type": "_doc" } }',
+  psMetricsNavigateIndex: '{ "index":{ "_index": "ps-metrics-navigate", "_type": "_doc" } }',
+  psRequestsIndex       : '{ "index":{ "_index": "ps-requests", "_type": "_doc" } }',
+  psPerfEntriesIndex    : '{ "index":{ "_index": "ps-perf-entries", "_type": "_doc" } }',
 };
 
 function _getMetricsNavigate (perfEntries, meta) {
   const metrics = {
-    fp             : perfEntries.filter(pe => pe.name === 'first-paint'),
-    fcp            : perfEntries.filter(pe => pe.name === 'first-contentful-paint'),
-    ttfb           : perfEntries[0].responseStart - perfEntries[0].requestStart,
-    response       : perfEntries[0].responseEnd - perfEntries[0].requestStart,
-    load           : perfEntries[0].loadEventEnd,
-    domComplete    : perfEntries[0].domComplete,
-    domInteractive : perfEntries[0].domInteractive,
-    dns            : perfEntries[0].domainLookupEnd - perfEntries[0].domainLookupStart,
-    initConn       : perfEntries[0].connectEnd - perfEntries[0].connectStart,
+    fp            : perfEntries.filter(pe => pe.name === 'first-paint'),
+    fcp           : perfEntries.filter(pe => pe.name === 'first-contentful-paint'),
+    ttfb          : perfEntries[0].responseStart - perfEntries[0].requestStart,
+    response      : perfEntries[0].responseEnd - perfEntries[0].requestStart,
+    load          : perfEntries[0].loadEventEnd,
+    domComplete   : perfEntries[0].domComplete,
+    domInteractive: perfEntries[0].domInteractive,
+    dns           : perfEntries[0].domainLookupEnd - perfEntries[0].domainLookupStart,
+    initConn      : perfEntries[0].connectEnd - perfEntries[0].connectStart,
   };
 
   return [{
@@ -182,7 +182,7 @@ async function exportWebPerfStats (perfEntries) {
   await axios.post(`${elasticUrl}:${elasticPort}/_bulk`, bulkPayload, {
     headers: {
       'content-type': 'application/x-ndjson',
-    }
+    },
   });
 
   return true;

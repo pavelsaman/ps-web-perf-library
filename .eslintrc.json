@@ -162,7 +162,7 @@
       "max-lines-per-function": [
           "warn",
           {
-              "max": 20,
+              "max": 30,
               "skipComments": true,
               "skipBlankLines": true
           }
