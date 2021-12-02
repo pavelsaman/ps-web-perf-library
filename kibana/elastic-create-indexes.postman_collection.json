@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "3e1f9089-2375-4695-b987-1341dbda6bf0",
+		"name": "Elastic create index",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{domain}}:{{port}}?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-perf-entries?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-perf-entries?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-perf-entries"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"properties\": {\n        \"ttfb\": {\n            \"type\": \"double\"\n        },\n        \"response\": {\n            \"type\": \"double\"\n        },\n        \"initConn\": {\n            \"type\": \"double\"\n        },\n        \"dns\": {\n            \"type\": \"double\"\n        },\n        \"domComplete\": {\n            \"type\": \"double\"\n        },\n        \"domInteractive\": {\n            \"type\": \"double\"\n        },\n        \"load\": {\n            \"type\": \"double\"\n        },\n        \"redirectTime\": {\n            \"type\": \"double\"\n        },\n        \"headerSize\": {\n            \"type\": \"integer\"\n        },\n        \"entryType\": {\n            \"type\": \"text\"\n        },\n        \"encodedBodySize\": {\n            \"type\": \"integer\"\n        },\n        \"decodedBodySize\": {\n            \"type\": \"integer\"\n        },\n        \"transferSize\": {\n            \"type\": \"integer\"\n        },\n        \"name\": {\n            \"type\": \"text\"\n        },\n        \"timestamp\": {\n            \"type\": \"date\",\n            \"format\": \"strict_date_time\"\n        },\n        \"uuid\": {\n            \"type\": \"keyword\"\n        },\n        \"uuidPerfEntries\": {\n            \"type\": \"keyword\"\n        },\n        \"sequence\": {\n            \"type\": \"integer\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-perf-entries",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-perf-entries",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-requests?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-requests?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-requests"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"properties\": {\n        \"requests\": {\n            \"type\": \"integer\"\n        },\n        \"fonts\": {\n            \"type\": \"integer\"\n        },\n        \"scripts\": {\n            \"type\": \"integer\"\n        },\n        \"images\": {\n            \"type\": \"integer\"\n        },\n        \"css\": {\n            \"type\": \"integer\"\n        },\n        \"other\": {\n            \"type\": \"integer\"\n        },\n        \"requestsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherTransferSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherEncodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"requestsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"fontsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"scriptsDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"imagesDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"cssDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"otherDecodedSize\": {\n            \"type\": \"integer\"\n        },\n        \"uuidPerfEntries\": {\n            \"type\": \"keyword\"\n        },\n        \"timestamp\": {\n            \"type\": \"date\",\n            \"format\": \"strict_date_time\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-requests",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-requests",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-metrics-navigate?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-metrics-navigate?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-metrics-navigate"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"properties\": {\n        \"ttfb\": {\n            \"type\": \"double\"\n        },\n        \"fp\": {\n            \"type\": \"double\"\n        },\n        \"fcp\": {\n            \"type\": \"double\"\n        },\n        \"response\": {\n            \"type\": \"double\"\n        },\n        \"load\": {\n            \"type\": \"double\"\n        },\n        \"domInteractive\": {\n            \"type\": \"double\"\n        },\n        \"domComplete\": {\n            \"type\": \"double\"\n        },\n        \"dns\": {\n            \"type\": \"double\"\n        },\n        \"initConn\": {\n            \"type\": \"double\"\n        },\n        \"uuidPerfEntries\": {\n            \"type\": \"keyword\"\n        },\n        \"timestamp\": {\n            \"type\": \"date\",\n            \"format\": \"strict_date_time\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-metrics-navigate",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ps-metrics-navigate",
+						"_mapping"
+					],
+					"query": [
+						{
+							"key": "pretty",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
