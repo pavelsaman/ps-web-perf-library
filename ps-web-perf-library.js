@@ -194,4 +194,4 @@ async function exportWebPerfStats (perfEntries) {
   return true;
 }
 
-module.exports = { exportWebPerfStats };
+module.exports = { exportWebPerfStats, forTesting: { _getMetricsNavigate, _getRequests, _getPerfEntries, _getPlain } };
