@@ -19,7 +19,7 @@ $ yarn add ps-web-perf-library
 Use [`samanpavel/ps-elastic-stack-setup`](https://hub.docker.com/r/samanpavel/ps-elastic-stack-setup) Docker image to set up Elastic stack:
 
 ```
-docker run -it --rm \
+$ docker run -it --rm \
 --env ELASTICURL=https://web-perf-xxxxxx.es.eu-central-1.aws.cloud.es.io \
 --env ELASTICPORT=9243 \
 --env ELASTICUSER=elastic \
