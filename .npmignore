@@ -1,0 +1,6 @@
+elasticstack/
+node_modules/
+static/
+.dockerignore
+.eslintcache
+Dockerfile
