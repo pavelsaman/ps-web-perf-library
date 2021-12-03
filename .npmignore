@@ -4,3 +4,4 @@ static/
 .dockerignore
 .eslintcache
 Dockerfile
+.github/
