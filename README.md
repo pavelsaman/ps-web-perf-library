@@ -66,6 +66,8 @@ await exportWebPerfStats(perfEntries);
 
 Performance statistics from `performance.getEntries()` method will end up in Elasticsearch, and will be displayed on Kibana dashboards.
 
+If you want to disable sending statistics into Elastic stack, set up environment variable `NOSTATS` to `true`.
+
 ## Kibana dashboards
 
 There are two dashboards in Kibana:
