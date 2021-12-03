@@ -66,4 +66,14 @@ await exportWebPerfStats(perfEntries);
 
 Performance statistics from `performance.getEntries()` method will end up in Elasticsearch, and will be displayed on Kibana dashboards.
 
+## Kibana dashboards
 
+There are two dashboards in Kibana:
+
+### Web Perf Request Statistics
+
+![image](./static/kibana-requests-dashboard.png)
+
+### Web Perf Navigation Statistics
+
+![image](./static/kibana-navigation-dashboard.png)

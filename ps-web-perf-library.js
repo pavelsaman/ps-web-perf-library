@@ -183,7 +183,7 @@ async function exportWebPerfStats (perfEntries) {
   const bulkPayload = `${psMetricsNavigatePlain}${psRequestsPlain}${psPerfEntriesPlain}`;
   await axios.post(`${elasticUrl}:${elasticPort}/_bulk`, bulkPayload, {
     auth: {
-      user    : elasticUser,
+      username: elasticUser,
       password: elasticPassword,
     },
     headers: {
