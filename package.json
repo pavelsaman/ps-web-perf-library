@@ -1,8 +1,17 @@
 {
   "name": "ps-web-perf-library",
+  "description": "Library for sending web performance data to Elastic stack",
   "version": "1.0.0",
   "main": "ps-web-perf-library.js",
-  "author": "Pavel Saman",
+  "author": "Pavel Saman <samanpavel@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/pavelsaman/ps-web-perf-library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavelsaman/ps-web-perf-library.git"
+  },
+  "homepage": "https://github.com/pavelsaman/ps-web-perf-library",
   "license": "MIT",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --cache \"**/**/*.js\"",

@@ -35,9 +35,19 @@ samanpavel/ps-elastic-stack-setup
 
 Typically, you want to use it along with some test framework like WDIO or Puppeteer.
 
-An example could be the following check where you navigate to a homepage:
+The library needs Elastic credentials, you can prepare a `.env` file where your set them up:
+
+```
+ELASTICURL=
+ELASTICPORT=
+ELASTICUSER=
+ELASTICPASSWORD=
+```
+
+An example how to use the library in code could be the following check where you navigate to a homepage:
 
 ```javascript
+require('dotenv').config();
 const { exportWebPerfStats } = require('ps-web-perf-library');
 
 it('Open homepage', async () => {
@@ -58,6 +68,7 @@ it('Open homepage', async () => {
 Or a brief example in Puppeteer:
 
 ```javascript
+require('dotenv').config();
 const { exportWebPerfStats } = require('ps-web-perf-library');
 
 const perfEntries = await page.evaluate(() => performance.getEntries());
