@@ -16,7 +16,7 @@ or `yarn`:
 $ yarn add ps-web-perf-library
 ```
 
-Use XYZ Docker image to set up Elastic stack:
+Use [`samanpavel/ps-elastic-stack-setup`](https://hub.docker.com/r/samanpavel/ps-elastic-stack-setup) Docker image to set up Elastic stack:
 
 ```
 docker run -it --rm \
@@ -28,7 +28,7 @@ docker run -it --rm \
 --env KIBANAPORT=9243 \
 --env KIBANAUSER=elastic \
 --env KIBANAPASSWORD=mysecretpwd \
-ps-elastic-stack-setup
+samanpavel/ps-elastic-stack-setup
 ```
 
 ## Usage
