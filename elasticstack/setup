@@ -1,14 +1,12 @@
 #!/bin/sh
 
 newman run elastic-create-indexes.postman_collection.json \
-  -e elastic-create-indexes.postman_environment.json \
   --env-var="baseUrl=$ELASTICURL" \
   --env-var="port=$ELASTICPORT" \
   --env-var="user=$ELASTICUSER" \
   --env-var="password=$ELASTICPASSWORD"
 
 newman run kibana.postman_collection.json \
-  -e kibana.postman_environment.json \
   --env-var="baseUrl=$KIBANAURL" \
   --env-var="port=$KIBANAPORT"  \
   --env-var="user=$KIBANAUSER" \

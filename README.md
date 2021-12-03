@@ -16,20 +16,19 @@ or `yarn`:
 $ yarn add ps-web-perf-library
 ```
 
-## Elastic stack setup
-
-I've created a docker image that you can use in order to:
-
-- set up Elasticsearch indexes
-- set up Kibana indexes
-- set up Kibana dashboards
-
-If everything goes smoothly, you can start collecting data and you will see them in your Kibana instance with no additional setup.
-
-Get your Elastic stack credentials ready and run:
+Use XYZ Docker image to set up Elastic stack:
 
 ```
-$ 
+docker run -it --rm \
+--env ELASTICURL=https://web-perf-xxxxxx.es.eu-central-1.aws.cloud.es.io \
+--env ELASTICPORT=9243 \
+--env ELASTICUSER=elastic \
+--env ELASTICPASSWORD=mysecretpwd \
+--env KIBANAURL=https://web-perf-xxxxxx.kb.eu-central-1.aws.cloud.es.io \
+--env KIBANAPORT=9243 \
+--env KIBANAUSER=elastic \
+--env KIBANAPASSWORD=mysecretpwd \
+ps-elastic-stack-setup
 ```
 
 ## Usage
@@ -56,4 +55,15 @@ it('Open homepage', async () => {
 });
 ```
 
-Performance statistics from `performance.getEntries()` API will end up in Elasticsearch, and will be shown on a Kibana dashboard.
+Or a brief example in Puppeteer:
+
+```javascript
+const { exportWebPerfStats } = require('ps-web-perf-library');
+
+const perfEntries = await page.evaluate(() => performance.getEntries());
+await exportWebPerfStats(perfEntries);
+```
+
+Performance statistics from `performance.getEntries()` method will end up in Elasticsearch, and will be displayed on Kibana dashboards.
+
+

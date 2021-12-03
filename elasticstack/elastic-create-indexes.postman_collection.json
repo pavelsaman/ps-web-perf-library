@@ -24,9 +24,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{domain}}:{{port}}?pretty",
+					"raw": "{{baseUrl}}:{{port}}?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"query": [
@@ -58,9 +58,9 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-perf-entries?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-perf-entries?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -104,9 +104,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-perf-entries/_mapping?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-perf-entries/_mapping?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -142,9 +142,9 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-requests?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-requests?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -188,9 +188,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-requests/_mapping?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-requests/_mapping?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -226,9 +226,9 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-metrics-navigate?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-metrics-navigate?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -272,9 +272,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
+					"raw": "{{baseUrl}}:{{port}}/ps-metrics-navigate/_mapping?pretty",
 					"host": [
-						"{{domain}}"
+						"{{baseUrl}}"
 					],
 					"port": "{{port}}",
 					"path": [
