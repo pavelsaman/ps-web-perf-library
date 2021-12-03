@@ -4,6 +4,8 @@ const uuid = require('uuid');
 
 const elasticUrl = process.env.ELASTICURL;
 const elasticPort = process.env.ELASTICPORT;
+const elasticUser = process.env.ELASTICUSER;
+const elasticPassword = process.env.ELASTICPASSWORD;
 
 const regexMatchers = {
   image  : /(.jpg|.jpeg|.png|.svg|.gif|.ico|.webp|.avif)/,
@@ -180,6 +182,10 @@ async function exportWebPerfStats (perfEntries) {
 
   const bulkPayload = `${psMetricsNavigatePlain}${psRequestsPlain}${psPerfEntriesPlain}`;
   await axios.post(`${elasticUrl}:${elasticPort}/_bulk`, bulkPayload, {
+    auth: {
+      user    : elasticUser,
+      password: elasticPassword,
+    },
     headers: {
       'content-type': 'application/x-ndjson',
     },
