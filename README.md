@@ -4,7 +4,7 @@ This is a tiny library for exporting web performance statistics from Performance
 
 ## Why
 
-A browser can tell you a lot of information about web performance through tis [Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API). But a typical setup is that you lose out on all these pieces of information because you do not gather them. However, with this library, you can collect and send performance entries to Elasticsearch and display them in Kibana.
+A browser can tell you a lot of information about web performance through its [Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance_API). But a typical setup is that you lose out on all these pieces of information because you do not gather them. However, with this library, you can collect and send performance entries to Elasticsearch and display them in Kibana.
 
 ## Installation
 
