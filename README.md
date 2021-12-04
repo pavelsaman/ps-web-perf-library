@@ -86,7 +86,8 @@ If you want to disable sending statistics into Elastic stack, set up environment
 I also recommend running a standalone Chrome in a Docker container, e.g.:
 
 ```
-$ docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.1.0-20211123
+$ docker run -d -p 4444:4444 --shm-size="2g" \
+selenium/standalone-chrome:4.1.0-20211123
 ```
 
 More on that [here](https://github.com/SeleniumHQ/docker-selenium).
