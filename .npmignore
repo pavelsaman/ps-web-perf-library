@@ -5,6 +5,6 @@ static/
 .eslintcache
 Dockerfile
 .github/
-test/
+tests/
 .eslintrc.json
 .gitignore
